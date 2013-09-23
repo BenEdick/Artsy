@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  art_works: MyString
+  bio: MyString
+  location: MyString
+  dob: 2013-09-15
+  p_image: MyString
+
+two:
+  art_works: MyString
+  bio: MyString
+  location: MyString
+  dob: 2013-09-15
+  p_image: MyString
