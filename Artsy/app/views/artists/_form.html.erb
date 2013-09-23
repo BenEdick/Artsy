@@ -1,0 +1,53 @@
+<%= form_for @artist do |f| %>
+  <% if @artist.errors.any? %>
+    <ul>
+      <% @artist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+    <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+ <div>
+    <%= f.label :date_of_birth %>
+    <%= f.date_select :dob, start_year: 1910 %>
+  </div>
+    <div>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div>
+    <%= f.label :Image_URL %>
+    <%= f.text_field :p_image %>
+  </div>
+<%
+=begin
+%>
+
+  <h3>Art Work</h3>
+  <%= f.fields_for :art do |art_form| %>
+      <div>
+    <%= art_form.label :name %>
+    <%= art_form.text_area :name %>
+  </div>
+  <div>
+    <%= art_form.label :description %>
+    <%= art_form.text_field :description %>
+  </div>
+<% end %>
+<%
+=end
+%>
+
+  <%= f.submit %>
+<% end %>

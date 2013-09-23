@@ -1,0 +1,45 @@
+<h1>Artist#index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Bio
+      </th>
+      <th>
+        Location
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Number of Artwork
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.bio %></td>
+        <td><%= artist.location %></td>
+        <td><%= artist.age %></td>
+        <td>#</td>
+        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+        <td><%= link_to 'Show', artist_path(artist) %></td>
+        <td><%= link_to 'Destroy', artist_path(artist), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add a New Artist', new_artist_path %>
+<%= link_to 'View Art', arts_path %>
+< br/>
+
+
+
+
+
+

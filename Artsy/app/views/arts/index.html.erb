@@ -1,0 +1,37 @@
+<h1>ArtWork#index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Artwork
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Location
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Genre
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @art_works.each do |art| %>
+      <tr>
+        <td><%= art.name %></td>
+        <td><%= art.description %></td>
+        <td><%= art.type %></td>
+        <td><%= art.genre %></td>
+        <td><%= link_to 'Edit', edit_art_path(art) %></td>
+        <td><%= link_to 'Show', art_path(art) %></td>
+        <td><%= link_to 'Destroy', art_path(art), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add a New Art', new_art_path %>
+<%= link_to 'Back to Artists', artists_path %>
