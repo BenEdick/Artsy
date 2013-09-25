@@ -47,6 +47,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 #Kaminari
 gem 'kaminari'
 
+#NewRelic
+gem 'newrelic_rpm'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
